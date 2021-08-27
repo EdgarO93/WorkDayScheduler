@@ -44,7 +44,7 @@ function saveData(event) {
     var text = $(event.target).siblings(".description").val();
     var time = $(event.target).siblings(".description").attr("id");
     localStorage.setItem(time, text);
-    alert("test");
+    
 };
 
 function getData() {

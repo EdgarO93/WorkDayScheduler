@@ -14,23 +14,27 @@ timer = setInterval(function () {
     $('#clock').text(time);
     $('textarea').each(function () {
 
-        var blockTime = $(this).attr("id");
-        var blockHour = moment(blockTime, "HH:mm")
-        // console.log(blockHour)
+        var blockParse = $(this).attr("id");
+        var blockTime = parseInt(blockParse);
+     
 
-        if (moment(time, "HH:mm").isAfter(blockHour, "HH:mm")) {
+        var d = new Date();
+        var hour = d.getHours();
 
-            $(".blockT").addClass("past").removeClass("blockT");
-
+        if (hour > blockTime ) {
+            console.log(hour >blockTime)
+            $(this).addClass("past")
+            console.log(this)
+         
         }
-        else if (moment(time, "HH:mm").isBefore(blockHour, "HH:mm")) {
-            $(".blockT").addClass("future").removeClass("blockT");
+        else if (hour < blockTime) {
+            $(this).addClass("future")
 
         }
         else {
-            $(".blockT").addClass("present").removeClass("blockT");
+            $(this).addClass("present")
         }
-
+       
     })
 
 

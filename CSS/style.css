@@ -53,6 +53,10 @@ textarea {
   color: white;
 }
 
+.description {
+  white-space: pre-wrap;
+}
+
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;

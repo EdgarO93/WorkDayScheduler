@@ -3,6 +3,8 @@ var today = moment().format("MMMM D, YYYY");
 
 //sets time  
 var time = moment().format("HH:mm");
+//gets the data
+getData();
 
 // Date Set (month number, year),
 $("#currentDay").text(" Today is  " + today);
@@ -16,36 +18,44 @@ timer = setInterval(function () {
 
         var blockParse = $(this).attr("id");
         var blockTime = parseInt(blockParse);
-     
-
         var d = new Date();
         var hour = d.getHours();
 
-        if (hour > blockTime ) {
-            console.log(hour >blockTime)
+        if (hour > blockTime) {
+            // console.log(hour >blockTime)
             $(this).addClass("past")
-            console.log(this)
-         
+            // console.log(this)
         }
         else if (hour < blockTime) {
             $(this).addClass("future")
-
         }
         else {
             $(this).addClass("present")
         }
-       
-    })
 
+    })
 
 }, 1000);
 
 
+$(".saveBtn").on("click", saveData);
 
-//function to save each input and add to local storage
+function saveData(event) {
+    var text = $(event.target).siblings(".description").val();
+    var time = $(event.target).siblings(".description").attr("id");
+    localStorage.setItem(time, text);
+    alert("test");
+};
 
-//click event for save button
-// $(safeBtn).on("click", function () {
-//     //function for saving list
+function getData() {
+    $('#9.description').val(localStorage.getItem('9'));
+    $('#10.description').val(localStorage.getItem('10'));
+    $('#11.description').val(localStorage.getItem('11'));
+    $('#12.description').val(localStorage.getItem('12'));
+    $('#13.description').val(localStorage.getItem('13'));
+    $('#14.description').val(localStorage.getItem('14'));
+    $('#15.description').val(localStorage.getItem('15'));
+    $('#16.description').val(localStorage.getItem('16'));
+    $('#17.description').val(localStorage.getItem('17'));
+};
 
-// });

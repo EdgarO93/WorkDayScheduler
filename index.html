@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Edgar's Work Day Scheduler </title>
+   <!-- links for bootstrap , fontawesome and google fonts -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -19,23 +21,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/style.css" />
-    <title>Work Day Scheduler</title>
+    
   </head>
 
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+     <!-- this is where the date will appear-->
       <p id="currentDay" class="lead"></p>
+      <!-- this is where the clock will appear -->
       <p id="clock"></p>
     </header>
 
     <section class="container">
       <!-- Timeblocks go here -->
-      <!-- pdate time id -->
+     <!-- each section is a timeblock row created with Bootstrap -->
       <section class="row blockT">
+        <!-- this is the part of the row that has the time -->
         <section class="col-1 hour">9 AM</section>
+        <!-- this part is where you can input text and has the time id -->
         <textarea class="col-10 description" id="9"></textarea>
+        <!-- this part is the save button -->
         <button class="col-1 saveBtn">Save</button>
       </section>
       <section class="row blockT">
@@ -79,7 +86,7 @@
         <button class="col-1 saveBtn">Save</button>
       </section>
     </section>
-
+<!-- links for jquer and momentJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="Javascript/script.js"></script>

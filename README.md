@@ -8,8 +8,11 @@ This WorkDayScheduler was created with Javascript, jQuery and APIs such as Boots
 ## Screenshot
 ![plot](Assets/WDS.png)
 
-## License
-This project is licensed under the terms of the MIT license.
+Example from a different day.
+![plot](Assets/2.png)
+
+## Contact Info
+You can contact me at edort93@gmail.com
 
 ## Acknowlegments
 ~~~
